@@ -25,7 +25,6 @@
   color: gray;
 }
 .post-bottom {
-  margin-top: 10px;
   margin-bottom: 10px;
   padding: 15px 25px;
 }
@@ -47,6 +46,7 @@
 }
 .post-option > p {
   margin-left: 10px;
+  margin-top: 5px;
 }
 .post-option:hover {
   background-color: #eff2f5;

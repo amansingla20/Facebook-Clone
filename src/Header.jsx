@@ -6,17 +6,21 @@ import FlagIcon from '@material-ui/icons/Flag';
 import SubscriptionsOutlinedIcon from '@material-ui/icons/SubscriptionsOutlined';
 import StorefrontOutlinedIcon from '@material-ui/icons/StorefrontOutlined';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
-import { Avatar, IconButton } from '@material-ui/core';
+import { Avatar, IconButton} from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {Link} from 'react-router-dom';
 function Header() {
+    let name = localStorage.getItem('userName');
     return (
         <div className = 'header'>
             <div className="headerLeft">
+                <Link to='/'>
                 <img src= 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png' 
-                alt = 'fblogo' />
+                alt = 'fblogo' className='fblogo'/>
+                </Link>
                 <div className="headerInput">
                 <SearchIcon />
                 <input type="text" 
@@ -44,19 +48,19 @@ function Header() {
             <div className="headerRight">
                 <div className="headerInfo">
                     <Avatar src = 'https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png'/>
-                    <h4>Aman Singla</h4>
+                    <h4>{name}</h4>
                 </div>
-                <IconButton>
-                    <AddIcon />
+                <IconButton >
+                    <AddIcon fontSize='large'/>
                 </IconButton>
                 <IconButton>
-                    <ForumIcon />
+                    <ForumIcon fontSize='large'/>
                 </IconButton>
                 <IconButton>
-                    <NotificationsActiveIcon />
+                    <NotificationsActiveIcon fontSize='large' />
                 </IconButton>
                 <IconButton>
-                    <ExpandMoreIcon />
+                    <ExpandMoreIcon fontSize='large'/>
                 </IconButton>
             </div>
         </div>

@@ -1,18 +1,18 @@
 import './App.css';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Feed from './Feed';
+import Login from './Login';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Facebook_Dashboard from './Facebook_Dashboard';
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <div className='app-body'>
-        <Sidebar/>
-        <Feed />
-        {/* Widgets */ }
+    <Router>
+      <div>
+        <Switch>
+            <Route exact path='/' component={Login}/>
+            <Route path='/dashboard' component={Facebook_Dashboard}/>
+        </Switch>
       </div>
-    </div>
-  );
+    </Router>
+)
 }
 
 export default App;

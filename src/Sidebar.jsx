@@ -9,10 +9,11 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 function Sidebar() {
+    let name=localStorage.getItem('userName');
     return (
         <div className='sidebar'>
             <SidebarRow src = 'https://i.pinimg.com/originals/51/f6/fb/51f6fb256629fc755b8870c801092942.png'
-            title='Aman Singla'/>
+            title={name}/>
             <SidebarRow
             Icon={LocalHospitalIcon} 
             title='Covid-19 Information Center'
